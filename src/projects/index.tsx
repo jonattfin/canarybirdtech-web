@@ -98,6 +98,7 @@ function getProjects(): Card.CustomCardProps[] {
         "https://react-query-v3.tanstack.com",
         "https://vercel.com",
         "https://nestjs.com",
+        "https://typeorm.io",
         "https://heroku.com",
       ],
     },
