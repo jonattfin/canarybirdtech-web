@@ -20,10 +20,10 @@ const Home: NextPage = () => {
         justifyContent="center"
         alignItems="flex-start"
       >
-        {getProjects().map(({ title, webUrl, originalWebUrl, summaryText, contentText, githubUrl }) => (
+        {getProjects().map(({ title, webUrl, originalWebUrl, summaryText, contentText, githubUrl, imageUrl, sonarUrl, sonarImageUrl }) => (
           <Grid item key={title}>
             <Card.CustomCard
-              {...{ title, webUrl, originalWebUrl, summaryText, contentText, githubUrl }}
+              {...{ title, webUrl, originalWebUrl, summaryText, contentText, githubUrl, imageUrl, sonarUrl, sonarImageUrl }}
             />
           </Grid>
         ))}
@@ -38,7 +38,10 @@ function getProjects(): Card.CustomCardProps[] {
       title: "SimplyWall.St Clone",
       webUrl: "https://simplywallst-clone.vercel.app",
       originalWebUrl: "https://simplywall.st",
+      imageUrl: "/stock.jpg",
       githubUrl: "https://github.com/jonattfin/simplywallst-clone",
+      sonarUrl: "https://sonarcloud.io/summary/new_code?id=jonattfin_simplywallst-clone",
+      sonarImageUrl: "https://sonarcloud.io/api/project_badges/measure?project=jonattfin_simplywallst-clone&metric=alert_status",
       summaryText:
         "At Simply Wall St, our mission is to empower every retail investor in the world to make the best decisions possible.",
       contentText: "content hello",
@@ -47,7 +50,10 @@ function getProjects(): Card.CustomCardProps[] {
       title: "Ecosia.org Clone",
       webUrl: "https://ecosia-clone.vercel.app",
       originalWebUrl: "https://ecosia.org",
+      imageUrl: "/spiderweb.jpg",
       githubUrl: "https://github.com/jonattfin/ecosia-clone-web",
+      sonarUrl: "https://sonarcloud.io/summary/new_code?id=jonattfin_simplywallst-clone",
+      sonarImageUrl: "https://sonarcloud.io/api/project_badges/measure?project=jonattfin_simplywallst-clone&metric=alert_status",
       summaryText: `Ecosia is a search engine based in Berlin, Germany. It donates 100% of its revenue to nonprofit organizations focusing on reforestation. 
         Ecosia considers itself a social business, claiming to be CO2-negative, and supports full financial transparency and protects the privacy of its users.`,
       contentText: "content hello",
@@ -56,7 +62,10 @@ function getProjects(): Card.CustomCardProps[] {
       title: "Pulse.eco Clone",
       webUrl: "https://www.canarybird.io",
       originalWebUrl: "https://pulse.eco",
+      imageUrl: "/iot.jpg",
       githubUrl: "https://github.com/jonattfin/canarybird-web",
+      sonarUrl: "https://sonarcloud.io/summary/new_code?id=jonattfin_simplywallst-clone",
+      sonarImageUrl: "https://sonarcloud.io/api/project_badges/measure?project=jonattfin_simplywallst-clone&metric=alert_status",
       summaryText: `Pulse.eco is a crowdsourcing platform, which gathers and presents environmental data. Our network of sensor installations and other third-party sources gathers the data and translates them into visual and easy to understand information.`,
       contentText: "content hello",
     },

@@ -63,20 +63,13 @@ const ResponsiveAppBar = ({
             </ButtonGroup>
             <ExtraParagraph />
             <a
-              href="https://github.com/jonattfin/simplywallst-clone"
+              href="https://github.com/jonattfin"
               target="_blank"
               rel="noreferrer"
             >
               <GitHubIcon fontSize="small"></GitHubIcon>
             </a>
             <ExtraParagraph />
-            <a
-              href="https://sonarcloud.io/summary/new_code?id=jonattfin_simplywallst-clone"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <ExtraImage src="https://sonarcloud.io/api/project_badges/measure?project=jonattfin_simplywallst-clone&metric=alert_status" />
-            </a>
           </Toolbar>
         </Container>
       </AppBar>

@@ -13,6 +13,7 @@ import { red } from "@mui/material/colors";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import styled from "@emotion/styled";
+import { StockImage } from "./images";
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -33,7 +34,10 @@ export interface CustomCardProps {
   title: string;
   webUrl: string;
   originalWebUrl: string;
+  imageUrl: string;
   githubUrl: string;
+  sonarUrl: string,
+  sonarImageUrl: string,
   summaryText: string;
   contentText: string;
 }
@@ -63,7 +67,7 @@ export function CustomCard(props: CustomCardProps) {
       <CardMedia
         component="img"
         height="194"
-        image="/static/images/cards/paella.jpg"
+        image={props.imageUrl}
         alt="Paella dish"
       />
       <CardContent>
@@ -83,6 +87,13 @@ export function CustomCard(props: CustomCardProps) {
             <GitHubIcon fontSize="small"></GitHubIcon>
           </a>
         </IconButton>
+        <a
+          href="https://sonarcloud.io/summary/new_code?id=jonattfin_simplywallst-clone"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src="https://sonarcloud.io/api/project_badges/measure?project=jonattfin_simplywallst-clone&metric=alert_status" />
+        </a>
         <IconButton></IconButton>
         <ExpandMore
           expand={expanded}
@@ -105,9 +116,7 @@ export function CustomCard(props: CustomCardProps) {
 
 const SummaryTextWrapper = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-
-  height: 10vh;
+  justify-content: flex-start;
+  align-items: flex-end;
+  /* flex-direction: column; */
 `;
