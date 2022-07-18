@@ -12,7 +12,6 @@ import Typography from "@mui/material/Typography";
 import { red } from "@mui/material/colors";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import styled from "@emotion/styled";
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -49,7 +48,7 @@ export function CustomCard(props: CustomCardProps) {
   };
 
   return (
-    <Card sx={{ maxWidth: 400 }}>
+    <Card sx={{ maxWidth: 450 }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }}>
@@ -63,22 +62,15 @@ export function CustomCard(props: CustomCardProps) {
           </a>
         }
       />
-      <CardMedia
-        component="img"
-        height="194"
-        image={props.imageUrl}
-        alt="Paella dish"
-      />
+      <CardMedia component="img" height="194" image={props.imageUrl} />
       <CardContent>
-        <SummaryTextWrapper>
-          <Typography variant="body2" color="text.secondary">
-            {props.summaryText}
-            <p>&nbsp;</p>
-            <a href={props.originalWebUrl} target="_blank" rel="noreferrer">
-              {props.originalWebUrl}
-            </a>
-          </Typography>
-        </SummaryTextWrapper>
+        <Typography variant="body2" color="text.secondary">
+          {props.summaryText}
+          <div>&nbsp;</div>
+          <a href={props.originalWebUrl} target="_blank" rel="noreferrer">
+            {props.originalWebUrl}
+          </a>
+        </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton>
@@ -106,7 +98,9 @@ export function CustomCard(props: CustomCardProps) {
             <ul>
               {props.technologies.map((technology) => (
                 <li key={`${props.title}_${technology}`}>
-                  <a href={technology} target="_blank" rel="noreferrer">{technology}</a>
+                  <a href={technology} target="_blank" rel="noreferrer">
+                    {technology}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -116,10 +110,3 @@ export function CustomCard(props: CustomCardProps) {
     </Card>
   );
 }
-
-const SummaryTextWrapper = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  /* flex-direction: column; */
-`;
