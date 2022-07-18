@@ -1,3 +1,10 @@
+import { Heatmap, Bump } from "./components";
+
 export default () => {
-    return <div>About me</div>
-}
+  return (
+    <div>
+      <Heatmap.CustomHeatmap />
+      <Bump.CustomBump />
+    </div>
+  );
+};

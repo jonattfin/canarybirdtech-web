@@ -41,7 +41,7 @@ export interface CustomCardProps {
 }
 
 export function CustomCard(props: CustomCardProps) {
-  const [expanded, setExpanded] = React.useState(false);
+  const [expanded, setExpanded] = React.useState(true);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -93,8 +93,10 @@ export function CustomCard(props: CustomCardProps) {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>Technologies:</Typography>
-          <Typography paragraph>
+          <Typography paragraph variant="body2" color="text.secondary">
+            Technologies:
+          </Typography>
+          <Typography paragraph variant="body2" color="text.secondary">
             <ul>
               {props.technologies.map((technology) => (
                 <li key={`${props.title}_${technology}`}>

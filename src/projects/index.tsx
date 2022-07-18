@@ -74,6 +74,7 @@ function getProjects(): Card.CustomCardProps[] {
         "https://mui.com",
         "https://nivo.rocks",
         "https://react-query-v3.tanstack.com",
+        "https://vercel.com",
       ],
     },
     {
@@ -95,6 +96,9 @@ function getProjects(): Card.CustomCardProps[] {
         "https://mui.com",
         "https://nivo.rocks",
         "https://react-query-v3.tanstack.com",
+        "https://vercel.com",
+        "https://nestjs.com",
+        "https://heroku.com",
       ],
     },
     {
@@ -114,6 +118,7 @@ function getProjects(): Card.CustomCardProps[] {
         "https://react-leaflet.js.org",
         "https://nivo.rocks",
         "https://react-query-v3.tanstack.com",
+        "https://vercel.com",
       ],
     },
   ];
