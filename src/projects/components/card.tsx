@@ -58,7 +58,7 @@ export function CustomCard(props: CustomCardProps) {
         }
         title={props.title}
         subheader={
-          <a href={props.githubUrl} target="_blank" rel="noreferrer">
+          <a href={props.webUrl} target="_blank" rel="noreferrer">
             {props.webUrl}
           </a>
         }
