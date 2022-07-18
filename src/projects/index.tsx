@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import { Card } from "./components";
 import { Grid } from "@mui/material";
 import { Fragment } from "react";
+import { Card } from "./components";
 
 const Home: NextPage = () => {
   return (
@@ -20,19 +20,48 @@ const Home: NextPage = () => {
         justifyContent="center"
         alignItems="flex-start"
       >
-        <Grid item>
-          <Card />
-        </Grid>
-        <Grid item>
-          <Card />
-        </Grid>
-        <Grid item>
-          <Card />
-        </Grid>
+        {getProjects().map(({ title, webUrl, originalWebUrl, summaryText, contentText, githubUrl }) => (
+          <Grid item key={title}>
+            <Card.CustomCard
+              {...{ title, webUrl, originalWebUrl, summaryText, contentText, githubUrl }}
+            />
+          </Grid>
+        ))}
       </Grid>
     </Fragment>
   );
 };
+
+function getProjects(): Card.CustomCardProps[] {
+  return [
+    {
+      title: "SimplyWall.St Clone",
+      webUrl: "https://simplywallst-clone.vercel.app",
+      originalWebUrl: "https://simplywall.st",
+      githubUrl: "https://github.com/jonattfin/simplywallst-clone",
+      summaryText:
+        "At Simply Wall St, our mission is to empower every retail investor in the world to make the best decisions possible.",
+      contentText: "content hello",
+    },
+    {
+      title: "Ecosia.org Clone",
+      webUrl: "https://ecosia-clone.vercel.app",
+      originalWebUrl: "https://ecosia.org",
+      githubUrl: "https://github.com/jonattfin/ecosia-clone-web",
+      summaryText: `Ecosia is a search engine based in Berlin, Germany. It donates 100% of its revenue to nonprofit organizations focusing on reforestation. 
+        Ecosia considers itself a social business, claiming to be CO2-negative, and supports full financial transparency and protects the privacy of its users.`,
+      contentText: "content hello",
+    },
+    {
+      title: "Pulse.eco Clone",
+      webUrl: "https://www.canarybird.io",
+      originalWebUrl: "https://pulse.eco",
+      githubUrl: "https://github.com/jonattfin/canarybird-web",
+      summaryText: `Pulse.eco is a crowdsourcing platform, which gathers and presents environmental data. Our network of sensor installations and other third-party sources gathers the data and translates them into visual and easy to understand information.`,
+      contentText: "content hello",
+    },
+  ];
+}
 
 export default Home;
 

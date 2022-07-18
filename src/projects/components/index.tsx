@@ -1,2 +1,1 @@
-export { default as CircularProgress } from "./circularProgress";
-export { default as Card } from "./card";
+export * as Card from "./card";

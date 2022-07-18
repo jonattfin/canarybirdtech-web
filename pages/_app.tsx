@@ -8,7 +8,7 @@ import { HeaderComponent } from "../src/_shared_";
 import styled from "@emotion/styled";
 
 const blackColor = "#151B24";
-const whiteColor = "grey";
+const whiteColor = "white";
 
 const getTheme = () => {
   const themeObject: ThemeOptions = {
