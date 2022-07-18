@@ -13,7 +13,6 @@ import { red } from "@mui/material/colors";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import styled from "@emotion/styled";
-import { StockImage } from "./images";
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -88,11 +87,11 @@ export function CustomCard(props: CustomCardProps) {
           </a>
         </IconButton>
         <a
-          href="https://sonarcloud.io/summary/new_code?id=jonattfin_simplywallst-clone"
+          href={props.sonarUrl}
           target="_blank"
           rel="noreferrer"
         >
-          <img src="https://sonarcloud.io/api/project_badges/measure?project=jonattfin_simplywallst-clone&metric=alert_status" />
+          <img src={props.sonarImageUrl} />
         </a>
         <IconButton></IconButton>
         <ExpandMore
