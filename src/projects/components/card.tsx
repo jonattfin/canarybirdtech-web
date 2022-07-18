@@ -35,10 +35,10 @@ export interface CustomCardProps {
   originalWebUrl: string;
   imageUrl: string;
   githubUrl: string;
-  sonarUrl: string,
-  sonarImageUrl: string,
+  sonarUrl: string;
+  sonarImageUrl: string;
   summaryText: string;
-  contentText: string;
+  technologies: string[];
 }
 
 export function CustomCard(props: CustomCardProps) {
@@ -86,11 +86,7 @@ export function CustomCard(props: CustomCardProps) {
             <GitHubIcon fontSize="small"></GitHubIcon>
           </a>
         </IconButton>
-        <a
-          href={props.sonarUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href={props.sonarUrl} target="_blank" rel="noreferrer">
           <img src={props.sonarImageUrl} />
         </a>
         <IconButton></IconButton>
@@ -106,7 +102,15 @@ export function CustomCard(props: CustomCardProps) {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph>Technologies:</Typography>
-          <Typography paragraph>{props.contentText}</Typography>
+          <Typography paragraph>
+            <ul>
+              {props.technologies.map((technology) => (
+                <li key={`${props.title}_${technology}`}>
+                  <a href={technology} target="_blank" rel="noreferrer">{technology}</a>
+                </li>
+              ))}
+            </ul>
+          </Typography>
         </CardContent>
       </Collapse>
     </Card>
