@@ -34,7 +34,7 @@ const generateData = () => {
 
 const commonProps: BumpSvgProps<any, any> = {
   width: 900,
-  height: 360,
+  height: 450,
   margin: { top: 40, right: 100, bottom: 40, left: 100 },
   data: generateData(),
 };
