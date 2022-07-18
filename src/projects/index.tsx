@@ -1,9 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import styled from "@emotion/styled";
 
-import { Card, CircularProgress } from "./components";
+import { Card } from "./components";
 import { Grid } from "@mui/material";
 import { Fragment } from "react";
 
@@ -22,6 +20,9 @@ const Home: NextPage = () => {
         justifyContent="center"
         alignItems="flex-start"
       >
+        <Grid item>
+          <Card />
+        </Grid>
         <Grid item>
           <Card />
         </Grid>
