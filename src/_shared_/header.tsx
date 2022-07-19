@@ -8,11 +8,11 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { ButtonGroup } from "@mui/material";
 import styled from "@emotion/styled";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { useRouter } from "next/router";
 
 const pages = [
-  { text: "Home", link: "/" },
-  { text: "Projects", link: "projects" },
+  { text: "Projects", link: "/" },
   { text: "About me", link: "/about-me" },
 ];
 
@@ -68,9 +68,16 @@ const ResponsiveAppBar = ({
               target="_blank"
               rel="noreferrer"
             >
-              <GitHubIcon fontSize="small"></GitHubIcon>
+              <GitHubIcon fontSize="small"/>
             </a>
             <ExtraParagraph />
+            <a
+              href="https://www.linkedin.com/in/catalin-andrei-57936032/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <LinkedInIcon fontSize="small"/>
+            </a>
           </Toolbar>
         </Container>
       </AppBar>
