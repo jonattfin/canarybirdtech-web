@@ -79,7 +79,7 @@ export function CustomCard(props: CustomCardProps) {
           </a>
         </IconButton>
         <a href={props.sonarUrl} target="_blank" rel="noreferrer">
-          <img src={props.sonarImageUrl} />
+          <img src={props.sonarImageUrl} alt="sonar url"/>
         </a>
         <IconButton></IconButton>
         <ExpandMore

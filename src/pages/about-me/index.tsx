@@ -1,8 +1,9 @@
 import styled from "@emotion/styled";
 import { Divider, Stack } from "@mui/material";
 import { Bump } from "./components";
+import * as api from "../../api";
 
-export default () => {
+export default function AboutMe() {
   return (
     <div>
       <Stack
@@ -11,7 +12,7 @@ export default () => {
       >
         <Item>
           <h3>
-            I'm a software engineer passionate about technology and data
+            I&apos;m a software engineer passionate about technology and data
             science.
           </h3>
           <p>
@@ -19,13 +20,16 @@ export default () => {
             Javascript (React / Node).
           </p>
           <p>
-            My interests are: product development, sustainable software architecture, open source,
-            serverless computing, IoT and data science, etc.
+            My interests are: product development, sustainable software
+            architecture, open source, serverless computing, IoT and data
+            science.
           </p>
         </Item>
         <Item>
           <h2>Tech Stack</h2>
-          <Bump.CustomBump />
+          <BumpContainer>
+            <Bump.CustomBump data={api.generateData()} />
+          </BumpContainer>
         </Item>
       </Stack>
     </div>
@@ -39,4 +43,10 @@ const Item = ({ children }: { children: any }) => {
 const ContainerDiv = styled.div`
   text-align: center;
   color: grey;
+`;
+
+const BumpContainer = styled.div`
+  width: 50vw;
+  height: 50vh;
+  
 `;

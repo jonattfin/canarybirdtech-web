@@ -4,7 +4,7 @@ import { ThemeProvider, createTheme, ThemeOptions } from "@mui/material/styles";
 import { Grid } from "@mui/material";
 import Image from "next/image";
 import { useState } from "react";
-import { HeaderComponent } from "../src/_shared_";
+import { HeaderComponent } from "../src/pages/_shared_";
 import styled from "@emotion/styled";
 
 const blackColor = "#151B24";
@@ -82,7 +82,7 @@ const ContentContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
 `;
 

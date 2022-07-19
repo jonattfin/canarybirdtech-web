@@ -1,4 +1,3 @@
-import { Bump, BumpSvgProps } from "@nivo/bump";
 import range from "lodash/range";
 
 interface Datum {
@@ -7,7 +6,7 @@ interface Datum {
   extra: number;
 }
 
-const generateData = () => {
+export const generateData = () => {
   enum Technologies {
     JavaScript,
     React,
@@ -108,14 +107,3 @@ const generateData = () => {
     return 0;
   }
 };
-
-const commonProps: BumpSvgProps<any, any> = {
-  width: 900,
-  height: 600,
-  margin: { top: 40, right: 100, bottom: 40, left: 100 },
-  data: generateData(),
-};
-
-export function CustomBump() {
-  return <Bump {...commonProps} />;
-}
