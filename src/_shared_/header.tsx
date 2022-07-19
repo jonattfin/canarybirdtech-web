@@ -9,6 +9,7 @@ import { ButtonGroup } from "@mui/material";
 import styled from "@emotion/styled";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import BookIcon from '@mui/icons-material/Book';
 import { useRouter } from "next/router";
 
 const pages = [
@@ -72,11 +73,19 @@ const ResponsiveAppBar = ({
             </a>
             <ExtraParagraph />
             <a
-              href="https://www.linkedin.com/in/catalin-andrei-57936032/"
+              href="https://www.linkedin.com/in/catalin-andrei-57936032"
               target="_blank"
               rel="noreferrer"
             >
               <LinkedInIcon fontSize="small"/>
+            </a>
+            <ExtraParagraph />
+            <a
+              href="https://www.thepragmaticgeek.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <BookIcon fontSize="small"/>
             </a>
           </Toolbar>
         </Container>
