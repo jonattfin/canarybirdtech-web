@@ -1,3 +1,3 @@
-import { default as AboutMePage } from "../src/about-me";
+import { default as HomePage } from "../src/home";
 
-export default AboutMePage;
+export default HomePage;

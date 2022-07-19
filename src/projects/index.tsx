@@ -81,7 +81,7 @@ function getProjects(): Card.CustomCardProps[] {
       title: "Ecosia.org Clone",
       webUrl: "https://ecosia-clone.vercel.app",
       originalWebUrl: "https://ecosia.org",
-      imageUrl: "/spiderweb.jpg",
+      imageUrl: "/forrest.jpg",
       githubUrl: "https://github.com/jonattfin/ecosia-clone-web",
       sonarUrl:
         "https://sonarcloud.io/summary/new_code?id=jonattfin_simplywallst-clone",
@@ -96,6 +96,8 @@ function getProjects(): Card.CustomCardProps[] {
         "https://mui.com",
         "https://nivo.rocks",
         "https://react-query-v3.tanstack.com",
+        "https://jestjs.io",
+        "https://www.cypress.io",
         "https://vercel.com",
         "https://nestjs.com",
         "https://typeorm.io",

@@ -11,8 +11,9 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import { useRouter } from "next/router";
 
 const pages = [
-  { text: "About me", link: "/" },
+  { text: "Home", link: "/" },
   { text: "Projects", link: "projects" },
+  { text: "About me", link: "/about-me" },
 ];
 
 const ResponsiveAppBar = ({
