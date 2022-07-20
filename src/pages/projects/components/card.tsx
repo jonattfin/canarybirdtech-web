@@ -12,6 +12,7 @@ import Typography from "@mui/material/Typography";
 import { red } from "@mui/material/colors";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { IProject } from "../../../api/interfaces";
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -28,19 +29,7 @@ const ExpandMore = materialStyled((props: ExpandMoreProps) => {
   }),
 }));
 
-export interface CustomCardProps {
-  title: string;
-  webUrl: string;
-  originalWebUrl: string;
-  imageUrl: string;
-  githubUrl: string;
-  sonarUrl: string;
-  sonarImageUrl: string;
-  summaryText: string;
-  technologies: string[];
-}
-
-export function CustomCard(props: CustomCardProps) {
+export function CustomCard({ data }: { data: IProject }) {
   const [expanded, setExpanded] = React.useState(true);
 
   const handleExpandClick = () => {
@@ -52,34 +41,34 @@ export function CustomCard(props: CustomCardProps) {
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }}>
-            {props.title[0].toUpperCase()}
+            {data.title[0].toUpperCase()}
           </Avatar>
         }
-        title={props.title}
+        title={data.title}
         subheader={
-          <a href={props.webUrl} target="_blank" rel="noreferrer">
-            {props.webUrl}
+          <a href={data.webUrl} target="_blank" rel="noreferrer">
+            {data.webUrl}
           </a>
         }
       />
-      <CardMedia component="img" height="194" image={props.imageUrl} />
+      <CardMedia component="img" height="194" image={data.imageUrl} />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          {props.summaryText}
+          {data.summaryText}
           <div>&nbsp;</div>
-          <a href={props.originalWebUrl} target="_blank" rel="noreferrer">
-            {props.originalWebUrl}
+          <a href={data.originalWebUrl} target="_blank" rel="noreferrer">
+            {data.originalWebUrl}
           </a>
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton>
-          <a href={props.githubUrl} target="_blank" rel="noreferrer">
+          <a href={data.githubUrl} target="_blank" rel="noreferrer">
             <GitHubIcon fontSize="small"></GitHubIcon>
           </a>
         </IconButton>
-        <a href={props.sonarUrl} target="_blank" rel="noreferrer">
-          <img src={props.sonarImageUrl} alt="sonar url"/>
+        <a href={data.sonarUrl} target="_blank" rel="noreferrer">
+          <img src={data.sonarImageUrl} alt="sonar url" />
         </a>
         <IconButton></IconButton>
         <ExpandMore
@@ -98,8 +87,8 @@ export function CustomCard(props: CustomCardProps) {
           </Typography>
           <Typography paragraph variant="body2" color="text.secondary">
             <ul>
-              {props.technologies.map((technology) => (
-                <li key={`${props.title}_${technology}`}>
+              {data.technologies.map((technology) => (
+                <li key={`${data.title}_${technology}`}>
                   <a href={technology} target="_blank" rel="noreferrer">
                     {technology}
                   </a>

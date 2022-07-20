@@ -80,13 +80,13 @@ const ResponsiveAppBar = ({
               <LinkedInIcon fontSize="small"/>
             </a>
             <ExtraParagraph />
-            <a
+            {/* <a
               href="https://www.thepragmaticgeek.com"
               target="_blank"
               rel="noreferrer"
             >
               <BookIcon fontSize="small"/>
-            </a>
+            </a> */}
           </Toolbar>
         </Container>
       </AppBar>

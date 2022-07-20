@@ -28,7 +28,7 @@ export default function AboutMe() {
         <Item>
           <h2>Tech Stack</h2>
           <BumpContainer>
-            <Bump.CustomBump data={api.generateData()} />
+            <Bump.CustomBump data={api.fetchTechStack()} />
           </BumpContainer>
         </Item>
       </Stack>
@@ -46,7 +46,6 @@ const ContainerDiv = styled.div`
 `;
 
 const BumpContainer = styled.div`
-  width: 50vw;
-  height: 50vh;
-  
+  width: 40vw;
+  height: 40vh;
 `;
