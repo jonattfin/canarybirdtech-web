@@ -75,6 +75,8 @@ export function fetchProjects(): IProject[] {
         "https://nivo.rocks",
         "https://react-query-v3.tanstack.com",
         "https://vercel.com",
+        "https://nestjs.com",
+        "https://heroku.com",
       ],
     },
   ];
