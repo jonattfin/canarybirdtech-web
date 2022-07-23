@@ -13,6 +13,8 @@ import { red } from "@mui/material/colors";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { IProject } from "../../../api/interfaces";
+import { Divider, Stack } from "@mui/material";
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -30,6 +32,8 @@ const ExpandMore = materialStyled((props: ExpandMoreProps) => {
 }));
 
 export function CustomCard({ data }: { data: IProject }) {
+  const { frontend, backend } = data;
+  
   const [expanded, setExpanded] = React.useState(true);
 
   const handleExpandClick = () => {
@@ -45,32 +49,25 @@ export function CustomCard({ data }: { data: IProject }) {
           </Avatar>
         }
         title={data.title}
-        subheader={
-          <a href={data.webUrl} target="_blank" rel="noreferrer">
-            {data.webUrl}
-          </a>
-        }
       />
       <CardMedia component="img" height="194" image={data.imageUrl} />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           {data.summaryText}
           <div>&nbsp;</div>
-          <a href={data.originalWebUrl} target="_blank" rel="noreferrer">
-            {data.originalWebUrl}
+          {"Source url: "}
+          <a href={data.webUrl} target="_blank" rel="noreferrer">
+            {data.webUrl}
           </a>
         </Typography>
       </CardContent>
+      <CardContent>
+        <Divider></Divider>
+      </CardContent>
       <CardActions disableSpacing>
-        <IconButton>
-          <a href={data.githubUrl} target="_blank" rel="noreferrer">
-            <GitHubIcon fontSize="small"></GitHubIcon>
-          </a>
-        </IconButton>
-        <a href={data.sonarUrl} target="_blank" rel="noreferrer">
-          <img src={data.sonarImageUrl} alt="sonar url" />
-        </a>
-        <IconButton></IconButton>
+        <Typography variant="body2" color="text.secondary">
+          {"Technologies: frontend & backend"}
+        </Typography>
         <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}
@@ -83,11 +80,57 @@ export function CustomCard({ data }: { data: IProject }) {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph variant="body2" color="text.secondary">
-            Technologies:
+            <Stack
+              direction="row"
+              spacing={1}
+              alignContent={"center"}
+              alignItems={"center"}
+            >
+              <a href={frontend.webUrl} target="_blank" rel="noreferrer">
+                <ExitToAppIcon />
+              </a>
+              <a href={frontend.githubUrl} target="_blank" rel="noreferrer">
+                <GitHubIcon />
+              </a>
+
+              <a href={frontend.sonarUrl} target="_blank" rel="noreferrer">
+                <img src={frontend.sonarImageUrl} alt="sonar url" />
+              </a>
+            </Stack>
           </Typography>
           <Typography paragraph variant="body2" color="text.secondary">
             <ul>
-              {data.technologies.map((technology) => (
+              {frontend.technologies.map((technology) => (
+                <li key={`${data.title}_${technology}`}>
+                  <a href={technology} target="_blank" rel="noreferrer">
+                    {technology}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </Typography>
+          <Typography paragraph variant="body2" color="text.secondary">
+            <Stack
+              direction="row"
+              spacing={1}
+              alignContent={"center"}
+              alignItems={"center"}
+            >
+              <a href={backend.webUrl} target="_blank" rel="noreferrer">
+                <ExitToAppIcon />
+              </a>
+              <a href={backend.githubUrl} target="_blank" rel="noreferrer">
+                <GitHubIcon />
+              </a>
+
+              <a href={backend.sonarUrl} target="_blank" rel="noreferrer">
+                <img src={backend.sonarImageUrl} alt="sonar url" />
+              </a>
+            </Stack>
+          </Typography>
+          <Typography paragraph variant="body2" color="text.secondary">
+            <ul>
+              {backend.technologies.map((technology) => (
                 <li key={`${data.title}_${technology}`}>
                   <a href={technology} target="_blank" rel="noreferrer">
                     {technology}

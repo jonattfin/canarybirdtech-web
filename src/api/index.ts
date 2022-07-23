@@ -5,73 +5,107 @@ export function fetchProjects(): IProject[] {
   return [
     {
       title: "SimplyWall.St Clone",
-      webUrl: "https://simplywallst-clone.vercel.app",
-      originalWebUrl: "https://simplywall.st",
-      imageUrl: "/stock.jpg",
-      githubUrl: "https://github.com/jonattfin/simplywallst-clone",
-      sonarUrl:
-        "https://sonarcloud.io/summary/new_code?id=jonattfin_simplywallst-clone",
-      sonarImageUrl:
-        "https://sonarcloud.io/api/project_badges/measure?project=jonattfin_simplywallst-clone&metric=alert_status",
       summaryText:
         "At Simply Wall St, our mission is to empower every retail investor in the world to make the best decisions possible.",
-      technologies: [
-        "https://nextjs.org",
-        "https://storybook.js.org",
-        "https://mui.com",
-        "https://nivo.rocks",
-        "https://react-query-v3.tanstack.com",
-        "https://vercel.com",
-      ],
+
+      webUrl: "https://simplywall.st",
+      imageUrl: "/stock.jpg",
+
+      frontend: {
+        webUrl: "https://simplywallst-clone.vercel.app",
+        githubUrl: "https://github.com/jonattfin/simplywallst-clone",
+        sonarUrl:
+          "https://sonarcloud.io/summary/new_code?id=jonattfin_simplywallst-clone",
+        sonarImageUrl:
+          "https://sonarcloud.io/api/project_badges/measure?project=jonattfin_simplywallst-clone&metric=alert_status",
+        technologies: [
+          "https://nextjs.org",
+          "https://storybook.js.org",
+          "https://mui.com",
+          "https://nivo.rocks",
+          "https://react-query-v3.tanstack.com",
+          "https://vercel.com",
+        ],
+      },
+      backend: {
+        webUrl: "https://simplywallst.herokuapp.com/graphql",
+        githubUrl: "https://github.com/jonattfin/simplywallst-clone-api",
+        sonarUrl: "https://sonarcloud.io/project/overview?id=jonattfin_simplywallst-clone-api",
+        sonarImageUrl: "https://sonarcloud.io/api/project_badges/measure?project=jonattfin_simplywallst-clone-api&metric=alert_status",
+        technologies: ["https://nestjs.com", "https://heroku.com"],
+      },
     },
     {
       title: "Ecosia.org Clone",
-      webUrl: "https://ecosia-clone.vercel.app",
-      originalWebUrl: "https://ecosia.org",
-      imageUrl: "/forrest.jpg",
-      githubUrl: "https://github.com/jonattfin/ecosia-clone-web",
-      sonarUrl:
-        "https://sonarcloud.io/summary/new_code?id=jonattfin_ecosia-clone2",
-      sonarImageUrl:
-        "https://sonarcloud.io/api/project_badges/measure?project=jonattfin_simplywallst-clone&metric=alert_status",
-      summaryText: `Ecosia is a search engine based in Berlin, Germany. It donates 100% of its revenue to nonprofit organizations focusing on reforestation. 
+      summaryText: `Ecosia is a search engine based in Berlin, Germany. It donates 100% of its revenue to nonprofit organizations focusing on reforestation.
         Ecosia considers itself a social business, claiming to be CO2-negative, and supports full financial transparency and protects the privacy of its users.`,
-      technologies: [
-        "https://nextjs.org",
-        "https://storybook.js.org",
-        "https://rxjs.dev",
-        "https://mui.com",
-        "https://nivo.rocks",
-        "https://react-query-v3.tanstack.com",
-        "https://jestjs.io",
-        "https://www.cypress.io",
-        "https://vercel.com",
-        "https://nestjs.com",
-        "https://typeorm.io",
-        "https://heroku.com",
-      ],
+      webUrl: "https://ecosia.org",
+      imageUrl: "/forrest.jpg",
+
+      frontend: {
+        webUrl: "https://ecosia-clone.vercel.app/",
+        githubUrl: "https://github.com/jonattfin/ecosia-clone-web",
+        sonarUrl:
+          "https://sonarcloud.io/summary/new_code?id=jonattfin_ecosia-clone2",
+        sonarImageUrl:
+          "https://sonarcloud.io/api/project_badges/measure?project=jonattfin_simplywallst-clone&metric=alert_status",
+
+        technologies: [
+          "https://nextjs.org",
+          "https://storybook.js.org",
+          "https://rxjs.dev",
+          "https://mui.com",
+          "https://nivo.rocks",
+          "https://react-query-v3.tanstack.com",
+          "https://jestjs.io",
+          "https://www.cypress.io",
+          "https://vercel.com",
+        ],
+      },
+      backend: {
+        webUrl: "https://ecosia-clone.herokuapp.com/api/",
+        githubUrl: "https://github.com/jonattfin/ecosia-clone-api",
+        sonarUrl: "https://sonarcloud.io/project/overview?id=jonattfin_ecosia-clone-nestjs",
+        sonarImageUrl: "https://sonarcloud.io/api/project_badges/measure?project=jonattfin_ecosia-clone-nestjs&metric=alert_status",
+        technologies: [
+          "https://nestjs.com",
+          "https://typeorm.io",
+          "https://heroku.com",
+        ],
+      },
     },
     {
       title: "Pulse.eco Clone",
-      webUrl: "https://pulse-clone.vercel.app",
-      originalWebUrl: "https://pulse.eco",
+
+      webUrl: "https://pulse.eco",
       imageUrl: "/iot.jpg",
-      githubUrl: "https://github.com/jonattfin/pulse-clone-web",
-      sonarUrl:
-        "https://sonarcloud.io/project/overview?id=jonattfin_pulse-clone-web",
-      sonarImageUrl:
-        "https://sonarcloud.io/api/project_badges/measure?project=jonattfin_pulse-clone-web&metric=alert_status",
       summaryText: `Pulse.eco is a crowdsourcing platform, which gathers and presents environmental data. Our network of sensor installations and other third-party sources gathers the data and translates them into visual and easy to understand information.`,
-      technologies: [
-        "https://nextjs.org",
-        "https://mui.com",
-        "https://react-leaflet.js.org",
-        "https://nivo.rocks",
-        "https://react-query-v3.tanstack.com",
-        "https://vercel.com",
-        "https://nestjs.com",
-        "https://heroku.com",
-      ],
+
+      frontend: {
+        webUrl: "https://pulse-clone.vercel.app",
+
+        githubUrl: "https://github.com/jonattfin/pulse-clone-web",
+        sonarUrl:
+          "https://sonarcloud.io/project/overview?id=jonattfin_pulse-clone-web",
+        sonarImageUrl:
+          "https://sonarcloud.io/api/project_badges/measure?project=jonattfin_pulse-clone-web&metric=alert_status",
+        technologies: [
+          "https://nextjs.org",
+          "https://mui.com",
+          "https://react-leaflet.js.org",
+          "https://nivo.rocks",
+          "https://react-query-v3.tanstack.com",
+          "https://vercel.com",
+        ],
+      },
+
+      backend: {
+        webUrl: "https://pulse-clone.herokuapp.com/api/",
+        githubUrl: "https://github.com/jonattfin/pulse-clone-api",
+        sonarUrl: "https://sonarcloud.io/project/overview?id=jonattfin_pulse-clone-api",
+        sonarImageUrl: "https://sonarcloud.io/api/project_badges/measure?project=jonattfin_pulse-clone-api&metric=alert_status",
+        technologies: ["https://nestjs.com", "https://heroku.com"],
+      },
     },
   ];
 }
