@@ -136,6 +136,7 @@ export const fetchTechStack = () => {
     NETCore,
     MicrosoftAzure,
     Kubernetes,
+    GraphQL
   }
 
   const years = range(2015, 2023);
@@ -217,6 +218,7 @@ export const fetchTechStack = () => {
         [Technologies.Nest]: 3,
         [Technologies.NETCore]: 2,
         [Technologies.MicrosoftAzure]: 1,
+        [Technologies.GraphQL]: 2.5,
       },
     };
 
