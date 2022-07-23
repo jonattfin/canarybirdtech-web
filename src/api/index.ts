@@ -1,12 +1,6 @@
 import range from "lodash/range";
 import { IProject } from "./interfaces";
 
-interface Datum {
-  x: number;
-  y: number;
-  extra: number;
-}
-
 export function fetchProjects(): IProject[] {
   return [
     {
@@ -37,7 +31,7 @@ export function fetchProjects(): IProject[] {
       imageUrl: "/forrest.jpg",
       githubUrl: "https://github.com/jonattfin/ecosia-clone-web",
       sonarUrl:
-        "https://sonarcloud.io/summary/new_code?id=jonattfin_simplywallst-clone",
+        "https://sonarcloud.io/summary/new_code?id=jonattfin_ecosia-clone2",
       sonarImageUrl:
         "https://sonarcloud.io/api/project_badges/measure?project=jonattfin_simplywallst-clone&metric=alert_status",
       summaryText: `Ecosia is a search engine based in Berlin, Germany. It donates 100% of its revenue to nonprofit organizations focusing on reforestation. 
@@ -59,14 +53,14 @@ export function fetchProjects(): IProject[] {
     },
     {
       title: "Pulse.eco Clone",
-      webUrl: "https://www.canarybird.io",
+      webUrl: "https://pulse-clone.vercel.app",
       originalWebUrl: "https://pulse.eco",
       imageUrl: "/iot.jpg",
-      githubUrl: "https://github.com/jonattfin/canarybird-web",
+      githubUrl: "https://github.com/jonattfin/pulse-clone-web",
       sonarUrl:
-        "https://sonarcloud.io/summary/new_code?id=jonattfin_simplywallst-clone",
+        "https://sonarcloud.io/project/overview?id=jonattfin_pulse-clone-web",
       sonarImageUrl:
-        "https://sonarcloud.io/api/project_badges/measure?project=jonattfin_simplywallst-clone&metric=alert_status",
+        "https://sonarcloud.io/api/project_badges/measure?project=jonattfin_pulse-clone-web&metric=alert_status",
       summaryText: `Pulse.eco is a crowdsourcing platform, which gathers and presents environmental data. Our network of sensor installations and other third-party sources gathers the data and translates them into visual and easy to understand information.`,
       technologies: [
         "https://nextjs.org",
@@ -80,6 +74,12 @@ export function fetchProjects(): IProject[] {
       ],
     },
   ];
+}
+
+interface Datum {
+  x: number;
+  y: number;
+  extra: number;
 }
 
 export const fetchTechStack = () => {
