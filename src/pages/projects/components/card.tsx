@@ -66,7 +66,7 @@ export function CustomCard({ data }: { data: IProject }) {
       </CardContent>
       <CardActions disableSpacing>
         <Typography variant="body2" color="text.secondary">
-          {"Technologies: frontend & backend"}
+          {"Frontend & backend technologies"}
         </Typography>
         <ExpandMore
           expand={expanded}

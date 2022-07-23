@@ -23,16 +23,22 @@ export function fetchProjects(): IProject[] {
           "https://storybook.js.org",
           "https://mui.com",
           "https://nivo.rocks",
-          "https://react-query-v3.tanstack.com",
+          "https://www.apollographql.com",
           "https://vercel.com",
         ],
       },
       backend: {
         webUrl: "https://simplywallst.herokuapp.com/graphql",
         githubUrl: "https://github.com/jonattfin/simplywallst-clone-api",
-        sonarUrl: "https://sonarcloud.io/project/overview?id=jonattfin_simplywallst-clone-api",
-        sonarImageUrl: "https://sonarcloud.io/api/project_badges/measure?project=jonattfin_simplywallst-clone-api&metric=alert_status",
-        technologies: ["https://nestjs.com", "https://heroku.com"],
+        sonarUrl:
+          "https://sonarcloud.io/project/overview?id=jonattfin_simplywallst-clone-api",
+        sonarImageUrl:
+          "https://sonarcloud.io/api/project_badges/measure?project=jonattfin_simplywallst-clone-api&metric=alert_status",
+        technologies: [
+          "https://nestjs.com",
+          "https://www.apollographql.com",
+          "https://heroku.com",
+        ],
       },
     },
     {
@@ -65,8 +71,10 @@ export function fetchProjects(): IProject[] {
       backend: {
         webUrl: "https://ecosia-clone.herokuapp.com/api/",
         githubUrl: "https://github.com/jonattfin/ecosia-clone-api",
-        sonarUrl: "https://sonarcloud.io/project/overview?id=jonattfin_ecosia-clone-nestjs",
-        sonarImageUrl: "https://sonarcloud.io/api/project_badges/measure?project=jonattfin_ecosia-clone-nestjs&metric=alert_status",
+        sonarUrl:
+          "https://sonarcloud.io/project/overview?id=jonattfin_ecosia-clone-nestjs",
+        sonarImageUrl:
+          "https://sonarcloud.io/api/project_badges/measure?project=jonattfin_ecosia-clone-nestjs&metric=alert_status",
         technologies: [
           "https://nestjs.com",
           "https://typeorm.io",
@@ -102,8 +110,10 @@ export function fetchProjects(): IProject[] {
       backend: {
         webUrl: "https://pulse-clone.herokuapp.com/api/",
         githubUrl: "https://github.com/jonattfin/pulse-clone-api",
-        sonarUrl: "https://sonarcloud.io/project/overview?id=jonattfin_pulse-clone-api",
-        sonarImageUrl: "https://sonarcloud.io/api/project_badges/measure?project=jonattfin_pulse-clone-api&metric=alert_status",
+        sonarUrl:
+          "https://sonarcloud.io/project/overview?id=jonattfin_pulse-clone-api",
+        sonarImageUrl:
+          "https://sonarcloud.io/api/project_badges/measure?project=jonattfin_pulse-clone-api&metric=alert_status",
         technologies: ["https://nestjs.com", "https://heroku.com"],
       },
     },
