@@ -34,7 +34,7 @@ export default function AboutMe() {
       </Stack>
     </div>
   );
-};
+}
 
 const Item = ({ children }: { children: any }) => {
   return <ContainerDiv>{children}</ContainerDiv>;
@@ -48,4 +48,8 @@ const ContainerDiv = styled.div`
 const BumpContainer = styled.div`
   width: 40vw;
   height: 40vh;
+
+  @media (max-width: 1024px) {
+    width: 70vw;
+  }
 `;

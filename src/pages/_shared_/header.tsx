@@ -5,11 +5,10 @@ import Toolbar from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import AdbIcon from "@mui/icons-material/Adb";
-import { ButtonGroup, Stack, Switch, Typography } from "@mui/material";
+import { Stack, Switch } from "@mui/material";
 import styled from "@emotion/styled";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import BookIcon from "@mui/icons-material/Book";
 import { useRouter } from "next/router";
 
 const pages = [
@@ -35,7 +34,7 @@ const ResponsiveAppBar = ({
         <Container>
           <Toolbar>
             <AdbIcon />
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <Box sx={{ flexGrow: 1, display: { md: "flex" } }}>
               {pages.map((page) => (
                 <Button
                   key={page.text}
@@ -76,13 +75,6 @@ const ResponsiveAppBar = ({
               <LinkedInIcon fontSize="small" />
             </a>
             <ExtraParagraph />
-            {/* <a
-              href="https://www.thepragmaticgeek.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <BookIcon fontSize="small"/>
-            </a> */}
           </Toolbar>
         </Container>
       </AppBar>
@@ -93,10 +85,6 @@ export default ResponsiveAppBar;
 
 const TopDiv = styled.div`
   padding: 1vh 0px;
-`;
-
-const ExtraImage = styled.img`
-  height: 50%;
 `;
 
 const ExtraParagraph = styled.p`
