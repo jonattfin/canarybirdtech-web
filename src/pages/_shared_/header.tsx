@@ -5,11 +5,11 @@ import Toolbar from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import AdbIcon from "@mui/icons-material/Adb";
-import { ButtonGroup } from "@mui/material";
+import { ButtonGroup, Stack, Switch, Typography } from "@mui/material";
 import styled from "@emotion/styled";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import BookIcon from '@mui/icons-material/Book';
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import BookIcon from "@mui/icons-material/Book";
 import { useRouter } from "next/router";
 
 const pages = [
@@ -49,27 +49,23 @@ const ResponsiveAppBar = ({
                 </Button>
               ))}
             </Box>
-            <ButtonGroup variant="text" size="small">
-              <Button
-                color={theme == "light" ? "success" : "primary"}
-                onClick={() => setTheme("light")}
-              >
-                Light
-              </Button>
-              <Button
-                color={theme == "dark" ? "success" : "primary"}
-                onClick={() => setTheme("dark")}
-              >
-                Dark
-              </Button>
-            </ButtonGroup>
+            <Stack direction="row" spacing={1} alignItems="center">
+              <Switch
+                checked={theme == 'dark'}
+                onChange={() => {theme == 'dark' ? setTheme('light'): setTheme('dark')}}
+                inputProps={{ "aria-label": "controlled" }}
+              />
+              <a href={"https://sonarcloud.io/project/information?id=jonattfin_canarybirdtech-web"} target="_blank" rel="noreferrer">
+                <img src={"https://sonarcloud.io/api/project_badges/measure?project=jonattfin_canarybirdtech-web&metric=alert_status"} alt="sonar url" />
+              </a>
+            </Stack>
             <ExtraParagraph />
             <a
               href="https://github.com/jonattfin"
               target="_blank"
               rel="noreferrer"
             >
-              <GitHubIcon fontSize="small"/>
+              <GitHubIcon fontSize="small" />
             </a>
             <ExtraParagraph />
             <a
@@ -77,7 +73,7 @@ const ResponsiveAppBar = ({
               target="_blank"
               rel="noreferrer"
             >
-              <LinkedInIcon fontSize="small"/>
+              <LinkedInIcon fontSize="small" />
             </a>
             <ExtraParagraph />
             {/* <a
