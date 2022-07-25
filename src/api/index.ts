@@ -49,7 +49,7 @@ export function fetchProjects(): IProject[] {
       imageUrl: "/forrest.jpg",
 
       frontend: {
-        webUrl: "https://ecosia-clone.vercel.app/",
+        webUrl: "https://ecosia-clone.vercel.app",
         githubUrl: "https://github.com/jonattfin/ecosia-clone-web",
         sonarUrl:
           "https://sonarcloud.io/summary/new_code?id=jonattfin_ecosia-clone2",

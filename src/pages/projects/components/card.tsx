@@ -33,7 +33,7 @@ const ExpandMore = materialStyled((props: ExpandMoreProps) => {
 
 export function CustomCard({ data }: { data: IProject }) {
   const { frontend, backend } = data;
-  
+
   const [expanded, setExpanded] = React.useState(true);
 
   const handleExpandClick = () => {
@@ -55,10 +55,12 @@ export function CustomCard({ data }: { data: IProject }) {
         <Typography variant="body2" color="text.secondary">
           {data.summaryText}
           <div>&nbsp;</div>
-          {"Source url: "}
-          <a href={data.webUrl} target="_blank" rel="noreferrer">
-            {data.webUrl}
-          </a>
+          <Stack direction="row" spacing={1}  alignContent={"center"} alignItems={"center"}>
+            <ExitToAppIcon />
+            <a href={frontend.webUrl} target="_blank" rel="noreferrer">
+              {frontend.webUrl}
+            </a>
+          </Stack>
         </Typography>
       </CardContent>
       <CardContent>
@@ -138,6 +140,14 @@ export function CustomCard({ data }: { data: IProject }) {
                 </li>
               ))}
             </ul>
+          </Typography>
+        </CardContent>
+        <CardContent>
+          <Typography paragraph variant="body2" color="text.secondary">
+            {"Source url: "}
+            <a href={data.webUrl} target="_blank" rel="noreferrer">
+              {data.webUrl}
+            </a>
           </Typography>
         </CardContent>
       </Collapse>
